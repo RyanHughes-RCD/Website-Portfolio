@@ -1,0 +1,200 @@
+:root{
+  --bg:#ffffff;
+  --card:#ffffff;
+  --accent:#0b84ff;
+  --text:#222;
+  --muted:#ffffff;
+  --max-width:1100px;
+  --radius:8px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,Segoe UI,system-ui,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+.container{max-width:var(--max-width);margin:0 auto;padding:1.25rem}
+.site-header{background:#ffffff;border-bottom:1px solid #ffffff}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.main-nav a{margin-left:1rem;color:var(--muted);text-decoration:none}
+.main-nav a:hover{color:var(--text)}
+
+.hero{padding:0rem 0;background:#ffffff}
+.hero h2{margin:0 0 0rem;font-size:2rem;z-index:10;position:relative; font: bold 60px Bahnschrift; display: inline-block;place-items: center;}
+.lead{color:var(--muted);margin-bottom:1rem}
+.btn{display:inline-block;padding:.6rem 1rem;background:var(--accent);color:#fff;border-radius:6px;text-decoration:none}
+
+section{padding:2rem 0}
+.about p{max-width:60ch;color:var(--muted)}
+
+.projects .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.project-card{background:var(--card);padding:1rem;border-radius:var(--radius);box-shadow:0 1px 2px rgba(16,24,40,0.04)}
+.project-card h4{margin-top:0;position:relative; font: bold 15px Bahnschrift; display: inline-block;place-items: center;}
+
+.skills .skill-list{display:flex;gap:.75rem;flex-wrap:wrap;list-style:none;padding:0;margin:0}
+.skill-list li{background:#ffffff;padding:.4rem .6rem;border-radius:999px;border:1px solid #ffffff;color:var(--muted)}
+
+.contact a{color:var(--accent)}
+
+.site-footer{padding:1rem 0;color: #000000;font-size:.9rem; font: bahnschrift; text-align: center;}
+
+@media (max-width:900px){
+  .projects .project-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+  .header-inner{flex-direction:column;align-items:flex-start}
+  .main-nav{margin-top:.5rem}
+  .projects .project-grid{grid-template-columns:1fr}
+  .hero h2{font-size:1.5rem}
+}
+
+.right-bar {
+    /* Position the element relative to the viewport */
+    position: fixed;
+    float:right;
+
+    /* Anchor it to the right edge of the screen */
+    right: 0;
+    top: 0;
+
+    /* Set its dimensions */
+    width: 15%;
+    height: 3400px; /* 100% of the viewport height */
+
+    /* Styling */
+    background-color: #000000;
+    color: white;
+    padding: 3px;
+    box-sizing: border-box; /* Ensures padding is included in the width calculation */
+    z-index: 10; /* Ensure it is above other elements */
+}
+
+.vertical-text {
+    writing-mode: vertical-lr;
+    overflow-y: auto; /* Enables vertical scroll */
+    font: bold 65px Bahnschrift;
+    display: inline-block;
+    animation: snap-move 14s linear infinite; /* Applies the animation */
+    position: relative;
+    right: -10%; /* Adjusts the position to be centered within the right bar */
+    z-index: index 15;
+}
+
+@keyframes snap-move {
+  0% {
+    transform: translateY(0); /* Start position: no translation */
+    }
+  100% {
+    transform: translateY(-50%); /* Resets to the start position for a seamless loop */
+  }
+}
+
+.logo {
+  position: sticky;
+  left: 42.5%; /* Adjust this value to position the container horizontally */
+  transform: translateX(-50%); /* Center the container horizontally */  
+  width: 200px;
+  height: auto;
+  text-align: center;
+  top: 0px;
+  z-index:15; /* Ensure it is above other elements */
+}
+
+.corner-container { 
+  display: inline-block;
+  place-items: center;
+  text-align: center;
+  justify-content: center;
+  display: grid;
+  place-items: center;
+  position: sticky;
+  left: 42.5%; /* Adjust this value to position the container horizontally */
+  transform: translateX(-50%); /* Center the container horizontally */
+
+  width: max-content;
+  height: 115px;
+  padding: 20px;
+  border: 5px solid black; /* A full border can help visualize the space */
+  background-color: #ffffff;
+  z-index: 0; /* Ensure it is behind the text */
+}
+
+.corner-container::before,
+.corner-container::after {
+  content: '';
+  position: absolute;
+  background: white; /* Color of the element's background to "hide" the middle of the border */
+}
+
+/* Hide the middle part of the top and bottom borders */
+.corner-container::before {
+  height: 120px; /* Line thickness */
+  left: 30px; /* Length of the visible corner part from the left */
+  right: 30px; /* Length of the visible corner part from the right */
+  top: -5px; /* Position it on top of the original border */
+  z-index: 5; /* Ensure it is above the original border */
+}
+
+/* Hide the middle part of the left and right borders */
+.corner-container::after {
+  width: 1005px; /* Line thickness */
+  top: 30px; /* Length of the visible corner part from the top */
+  bottom: 30px; /* Length of the visible corner part from the bottom */
+  left: -6px; /* Position it on the left of the original border */
+  z-index: 5; /* Ensure it is above the original border */
+}
+
+.pink-text {
+  color: rgb(231, 31, 103); /* Match crane logo */
+  display: inline-block;
+}
+
+.bodytext {
+  font: Bahnschrift;
+  font-size: 27px;
+  text-align: center;
+  position: sticky;
+  margin-right: 15%;
+}
+
+.quiettext {
+  font: Bahnschrift;
+  text-wrap: wrap;
+  text-align: center;
+  margin-right: 15%;
+  position: sticky;
+}
+
+.sidebar {
+  height: 100%; width: 0%; position: fixed; z-index: 1; top: 0; left: 0;
+  background-color: #ffffff; overflow-x: hidden; transition: 0.5s; padding-top: 60px;
+}
+.sidebar a { padding: 8px 8px 0px 32px; text-decoration: none; color: #000000; display: block;}
+
+.closebtn { position: absolute; top: 20px; left: 107px; font-size: 36px; background-color: transparent; border: none; cursor: pointer; 
+font-size: 45px;
+}
+.openbtn { position: absolute; top: 20px; left: 30px; font-size: 36px; background-color: transparent; border: none; cursor: pointer;
+font-size: 45px;
+}
+#main { transition: margin-left .5s; padding: 16px; }
+
+.sidebartext {
+  font: Bahnschrift;
+  font-size: 30px;
+  text-wrap: wrap;
+  text-align: center;
+  margin-top: 15%;
+  margin-right: 15%;
+  position: relative;
+}
+
+.icon{
+  width: 70px;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
