@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio — Your Name</title>
+  <link rel="stylesheet" href="Portfolio.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <img src="./Images/Showcase-Icon.webp" alt="CraneLogo" class = "logo">
+    </div>
+  </header>
+
+  <main>
+
+<!-- Main content container -->
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰</button>
+</div>
+
+<!-- The sidebar menu -->
+<aside id="mySidebar" class="sidebar">
+  <button class="closebtn" onclick="closeNav()">x</button>
+  <a href="/index.html" class = "sidebartext"><img src="./Images/HomeIcon.webp" alt="Icon" class="icon"> <br>HOME</a>
+  <a href="#" class = "sidebartext"><img src="./Images/Showcase-Icon.webp" alt="Icon" class="icon">SHOWCASE</a>
+  <a href="#" class = "sidebartext"><img src="./Images/V2-ResumeIcon.webp" alt="Icon" class="icon">RESUME</a>
+  <a href="#" class = "sidebartext"><img src="./Images/V1-ConnectIcon.webp" alt="Icon" class="icon">CONNECT</a>
+</aside>
+
+
+<script src="./Javascript-Functionality.js"></script>
+
+
+    <section class="hero">
+      <div class="corner-container">
+        <h2>SHOWCASE</h2>
+      </div>
+
+      <div>
+        <h1 class="bodytext">THIS IS THE PART OF THE WEBSITE WHERE I<br><span class="pink-text">SHOW</span> MY <span class="pink-text">PHOTOS</span>.</h1>
+        <h4 class="quiettext">HAVE FUN.</h4>
+      </div>
+
+        <div class = "bodytext">
+            <h1><img src="./Images/GreathornImg-Website.webp" alt="Greathorn Hexapod" class="centered-image" height = 500px>
+            <img src="./Images/GreathornRender.png" alt="Greathorn Render" class="centered-image" height = 500px>
+            <img src="./Images/PegasusV13Img1.webp" alt="Pegasus MP3 Unit" class="centered-image" height = 500px>
+            <img src="./Images/PegasusMp3Render.png" alt="Pegasus MP3 Render" class="centered-image" height = 500px>
+            </h1>
+        </div>
+
+    </section>
+
+    <div class="right-bar">
+      <h2 class="vertical-text">S  <span class="pink-text">x</span> ENGINEERING <span class="pink-text">x</span> DESIGN <span class="pink-text">x</span> ROBOTICS <span class="pink-text">x</span> ENGINEERING <span class="pink-text">x</span> DESIGN <span class="pink-text">x</span> ROBOTIC</h2>
+      <h2 aria-hidden = "true" class="vertical-text">S <span class="pink-text">x</span> ENGINEERING <span class="pink-text">x</span> DESIGN x ROBOTICS x ENGINEERING x DESIGN x ROBOTIC</h2>
+    </div>
+
+ 
+      
+
+
+
+
+  <footer class="site-footer">
+    <div class="quiettext">
+      <p>BUILT BY RYAN HUGHES. <br>THANKS FOR SCROLLING TO THE END.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
