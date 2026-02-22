@@ -203,3 +203,19 @@ font-size: 45px;
   display: inline-block;
   vertical-align: middle;
 }
+
+centered-iframe{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.medtext {
+  font: Bahnschrift;
+  font-size: 20px;
+  text-align: center;
+  position: sticky;
+  margin-right: 15%;
+}
